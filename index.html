@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rclone-Drive</title>
+  <meta name="description" content="Rclone-Drive is a personal Google Drive configuration for the open-source Rclone software, used to access one person's own Google Drive from Windows and macOS.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">Rclone-Drive</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="./" aria-current="page">Home</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>Rclone-Drive</h1>
+    <p class="lead">A personal Google Drive configuration for the open-source <a href="https://rclone.org/">Rclone</a> software. It lets one person access and manage their own Google Drive files from Windows and macOS computers.</p>
+
+    <p><a class="button-link" href="privacy.html">Read the Privacy Policy</a></p>
+
+    <h2>What it is</h2>
+    <p>Rclone is a command-line program for managing files on cloud storage. To connect Rclone to Google Drive, a Google OAuth client is needed. <strong>Rclone-Drive</strong> is the name of a Google Cloud project, and its OAuth 2.0 client, that I created for my own Rclone installations instead of using Rclone's shared default client.</p>
+    <p>It is a single-user, personal setup. It is not a commercial service, it is not offered to the public, and it is not a separate cloud storage application.</p>
+
+    <h2>What it is used for</h2>
+    <p>On my own Windows and macOS computers, Rclone uses this OAuth client to work with files in my Google Drive, for example to:</p>
+    <ul>
+      <li>list, download, and upload files and folders;</li>
+      <li>copy and synchronise files between a computer and Google Drive;</li>
+      <li>rename, move, and delete files in Google Drive;</li>
+      <li>mount Google Drive as a local drive or folder;</li>
+      <li>export Google Docs, Sheets, and Slides files to standard formats when downloading.</li>
+    </ul>
+
+    <h2>How authorization works</h2>
+    <p>Access to Google Drive is authorized with <a href="https://developers.google.com/identity/protocols/oauth2">Google OAuth 2.0</a>. When a Rclone remote is set up, Rclone opens Google's own sign-in and consent page in the browser. After consent, Google returns tokens to Rclone running on the same computer, and Rclone stores them in its local configuration file. No password is given to Rclone, and nothing passes through this website.</p>
+    <p>The OAuth client requests Google Drive and Google Docs access so that Rclone can read, create, modify, and delete Drive files. The <a href="privacy.html">Privacy Policy</a> describes the requested permissions and how data is handled.</p>
+
+    <div class="callout">
+      <p><strong>This website does not sign you in or touch any Drive files.</strong> It is a static informational page. It has no login, does not perform OAuth authentication, does not call Google APIs, and does not receive, store, or process Google Drive data. All of that happens inside Rclone on my own computers, which talks directly to Google.</p>
+    </div>
+
+    <h2>About Rclone</h2>
+    <p><a href="https://rclone.org/">Rclone</a> is an independent open-source project (<a href="https://github.com/rclone/rclone">source code on GitHub</a>). Rclone-Drive is only a personal configuration of it. This project is not developed, endorsed, or maintained by the Rclone developers, and it is not developed, endorsed, or maintained by Google. Its Google Drive setup follows Rclone's documentation on <a href="https://rclone.org/drive/#making-your-own-client-id">making your own client ID</a>.</p>
+
+    <h2>Revoking access</h2>
+    <p>Access granted to Rclone-Drive can be removed at any time on the <a href="https://myaccount.google.com/connections">Third-party apps &amp; services</a> page of the Google Account. See the <a href="privacy.html#revoking-access">Privacy Policy</a> for details.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this configuration or these pages can be raised through the <a href="https://github.com/Asilturkmen/rclone-drive-info/issues">GitHub issue tracker</a> of the repository that hosts this site.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="privacy.html">Privacy Policy</a> · <a href="https://github.com/Asilturkmen/rclone-drive-info">Source</a></p>
+      <p>Rclone-Drive is a personal project. Google Drive and Google Docs are trademarks of Google LLC. Rclone is an independent open-source project; neither Google nor the Rclone developers are affiliated with or endorse this project.</p>
+    </div>
+  </footer>
+</body>
+</html>

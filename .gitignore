@@ -1,0 +1,33 @@
+# Rclone configuration and credentials: never commit these
+rclone.conf
+*.conf
+rclone.conf.*
+.rclone.conf
+
+# Google OAuth client secrets and tokens
+client_secret*.json
+client_secrets*.json
+credentials*.json
+token*.json
+*.token
+*oauth*.json
+service-account*.json
+
+# Environment and local secret files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
+# Rclone caches and logs
+rclone-cache/
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
